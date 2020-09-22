@@ -1,0 +1,120 @@
+/* Examen Responsive */
+
+/* Amplada fins a 320px (versió móbil)*/
+* {
+    box-sizing: border-box;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    /* el profe a utilizado el display: inline-block */
+    list-style: none;
+    padding: 0.5rem;
+    /*padding: 0; y margin: 0; lo del padding 0.5rem NO! */
+    background-color: cadetblue;
+}
+
+.text_menu {
+    display: none;
+}
+
+li img {
+    width: 70px;
+    border: 1px solid black;
+    margin-left: 2px;
+    /*padding: 2px; lo del margin-left NO! */
+}
+
+#image_zenva_bg {
+    background: url("img/background.png");
+    height: 35vh;
+    background-size: cover;
+}
+
+.text_zenva_bg {
+    text-align: center;
+    font-size: 1.2em;
+    padding: 5.9rem;
+    color: white;
+}
+
+.text_introduction_banner {
+    text-align: center;
+    margin: 10px;
+}
+
+#banner_zenva p {
+    text-align: center;
+}
+
+/* TABLETS */
+@media  (min-width: 321px) and (max-width: 959px){
+    ul {
+        display: block;
+        padding: 0;
+    }
+    .text_menu {
+        display: block;
+        font-size: 1.2rem; 
+        color: white;
+        text-align: center;
+        border-bottom: 1px solid black;
+        padding: 1rem;
+    }
+    li img {
+        display: none;
+    }
+    .text_zenva_bg {
+        font-size: 1.6rem;
+        padding: 7.2rem;
+    }
+    #banner_zenva img {
+        display: block;
+        margin: auto; 
+    }
+}
+
+/* ORDENADORS */
+@media  (min-width: 960px){
+    ul {
+        padding: 0;
+        margin: 0;
+        /*text-align: right; es el que s'havia de posar*/
+        /*float: right;*/ /*Con esto se pone a la derecha pero no aparece toda la linia con background ??*/
+    }
+    .text_menu {
+        display: inline-block;
+        font-size: 1.2rem; 
+        color: white;
+        border-left: 1px solid black;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    li img {
+        display: none;
+    }
+    #image_zenva_bg {
+        height: 420px;
+        /*position: relative;*/ /* Esto te lo dejo comentado, pq era la otra forma de hacerlo */
+    }
+    .text_zenva_bg {
+        font-size: 2.2rem;
+        padding: 12.2rem;
+        /*position: absolute;/* Esto te lo dejo comentado, pq era la otra forma de hacerlo sin padding
+        top: 110px;
+        left: 150px;*/
+    }
+    #banner_zenva {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        max-width: 960px;
+        margin: auto;
+    }
+    #banner_zenva img {
+        margin: auto;
+        display: block;
+    }
+}
+
